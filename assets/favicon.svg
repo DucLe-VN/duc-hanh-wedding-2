@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6c674"/>
+      <stop offset="1" stop-color="#b28524"/>
+    </linearGradient>
+  </defs>
+  <!-- gold band -->
+  <circle cx="16" cy="21" r="7.6" fill="none" stroke="url(#band)" stroke-width="3.1"/>
+  <!-- diamond solitaire -->
+  <polygon points="9.6,8.6 22.4,8.6 16,14" fill="#8fc9dd"/>
+  <polygon points="12,5 20,5 22.4,8.6 9.6,8.6" fill="#cdeef7"/>
+  <polygon points="14,8.6 18,8.6 16,14" fill="#6fb8ce"/>
+  <polygon points="12,5 20,5 18,8.6 14,8.6" fill="#eaf7fb"/>
+</svg>

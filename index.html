@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Ngọc Đức ❤ Mỹ Hạnh · 25.10.2026</title>
+  <meta name="description" content="Thiệp mời cưới Ngọc Đức & Mỹ Hạnh — 25.10.2026" />
+
+  <!-- Heart favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="alternate icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='21'%20r='7.6'%20fill='none'%20stroke='%23c19a4b'%20stroke-width='3.1'/%3E%3Cpolygon%20points='9.6,8.6%2022.4,8.6%2016,14'%20fill='%23cdeef7'/%3E%3Cpolygon%20points='12,5%2020,5%2018,8.6%2014,8.6'%20fill='%23eaf7fb'/%3E%3C/svg%3E" />
+
+  <!-- Social share preview -->
+  <meta property="og:title" content="Ngọc Đức ❤ Mỹ Hạnh · 25.10.2026" />
+  <meta property="og:description" content="Trân trọng kính mời bạn đến chung vui cùng chúng tôi." />
+  <meta property="og:image" content="assets/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Màn hình mở thiệp / Enter overlay ===== -->
+  <div id="enter-overlay">
+    <div class="enter-inner">
+      <div class="double-happiness reveal-up">囍</div>
+      <div class="enter-names reveal-up">
+        <span id="enter-groom">Ngọc Đức</span>
+        <span class="amp">&</span>
+        <span id="enter-bride">Mỹ Hạnh</span>
+      </div>
+      <div class="enter-date reveal-up">25 . 10 . 2026</div>
+      <button id="enter-btn" class="enter-btn reveal-up">
+        <span data-vi>Mở thiệp mời</span><span data-en hidden>Open invitation</span>
+      </button>
+      <div class="enter-hint reveal-up">
+        <span data-vi>Nhấn để mở kèm nhạc nền ♪</span><span data-en hidden>Tap to open with music ♪</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Điều khiển nổi / Floating controls ===== -->
+  <button id="lang-toggle" class="floating-ctrl" aria-label="Language" title="VI / EN">VI</button>
+  <button id="music-toggle" class="floating-ctrl music-off" aria-label="Music" title="Music">
+    <span class="music-icon">♪</span>
+  </button>
+  <audio id="bg-music" loop preload="none"></audio>
+
+  <!-- ===== Nội dung / Content ===== -->
+  <main id="content" aria-hidden="true">
+
+    <!-- Hero -->
+    <section id="hero" class="section hero">
+      <div class="hero-slides" id="hero-slides"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="hero-dh">囍</div>
+        <p class="hero-kicker" data-reveal>
+          <span data-vi>Save the date</span><span data-en hidden>Save the date</span>
+        </p>
+        <h1 class="hero-names" data-reveal>
+          <span id="hero-groom">Ngọc Đức</span>
+          <span class="hero-amp">&</span>
+          <span id="hero-bride">Mỹ Hạnh</span>
+        </h1>
+        <p class="hero-date" data-reveal id="hero-date">25 . 10 . 2026</p>
+
+        <!-- Lời mời cá nhân hoá / Personalized greeting -->
+        <div class="hero-invite" id="hero-invite" data-reveal></div>
+
+        <!-- Đếm ngược / Countdown -->
+        <p class="cd-status" id="cd-status" hidden>
+          <span data-vi>Lễ cưới đang diễn ra 🎉</span><span data-en hidden>The wedding is happening now 🎉</span>
+        </p>
+        <div class="countdown" id="countdown" data-reveal>
+          <div class="cd-item"><span class="cd-num" id="cd-d">0</span><span class="cd-lbl" data-vi>Ngày</span><span class="cd-lbl" data-en hidden>Days</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-h">0</span><span class="cd-lbl" data-vi>Giờ</span><span class="cd-lbl" data-en hidden>Hrs</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-m">0</span><span class="cd-lbl" data-vi>Phút</span><span class="cd-lbl" data-en hidden>Min</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-s">0</span><span class="cd-lbl" data-vi>Giây</span><span class="cd-lbl" data-en hidden>Sec</span></div>
+        </div>
+        <p class="cd-done" id="cd-done" hidden>
+          <span data-vi>Chúng mình đã về chung một nhà ❤</span><span data-en hidden>Today we said I do ❤</span>
+        </p>
+      </div>
+      <button class="scroll-down" id="scroll-down" aria-label="Xem thêm nội dung">
+        <span class="sd-label" data-vi>Kéo xuống</span><span class="sd-label" data-en hidden>Scroll</span>
+        <span class="chev-wrap"><span class="chev"></span><span class="chev"></span></span>
+      </button>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section gallery">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" id="gallery-eyebrow"></p>
+        <div class="divider">❀</div>
+      </div>
+      <div class="gallery-stage" data-reveal>
+        <div class="gallery-track" id="gallery-track"></div>
+        <button class="gal-nav prev" id="gal-prev" aria-label="Previous">‹</button>
+        <button class="gal-nav next" id="gal-next" aria-label="Next">›</button>
+        <div class="gallery-dots" id="gallery-dots"></div>
+      </div>
+    </section>
+
+    <!-- Invitation card -->
+    <section id="invite" class="section invite">
+      <div class="invite-card" data-reveal>
+        <div class="card-dh">囍</div>
+        <p class="card-invite" id="card-invite"></p>
+
+        <!-- Families -->
+        <div class="families">
+          <div class="fam">
+            <p class="fam-side"><span data-vi>NHÀ TRAI</span><span data-en hidden>GROOM'S FAMILY</span></p>
+            <p class="fam-parent">Ông Bà</p>
+            <p class="fam-name" id="groom-father"></p>
+            <p class="fam-name" id="groom-mother"></p>
+            <p class="fam-home" id="groom-home"></p>
+          </div>
+          <div class="fam-heart">❤</div>
+          <div class="fam">
+            <p class="fam-side"><span data-vi>NHÀ GÁI</span><span data-en hidden>BRIDE'S FAMILY</span></p>
+            <p class="fam-parent">Ông Bà</p>
+            <p class="fam-name" id="bride-father"></p>
+            <p class="fam-name" id="bride-mother"></p>
+            <p class="fam-home" id="bride-home"></p>
+          </div>
+        </div>
+
+        <div class="card-couple">
+          <span class="cc-name" id="card-groom"></span>
+          <span class="cc-amp">&</span>
+          <span class="cc-name" id="card-bride"></span>
+        </div>
+
+        <!-- Two ceremonies -->
+        <div class="ceremonies">
+          <div class="cere" id="cere-vuquy"></div>
+          <div class="cere-sep">✦</div>
+          <div class="cere" id="cere-reception"></div>
+        </div>
+
+        <!-- Schedule -->
+        <div class="schedule" id="schedule"></div>
+
+        <p class="card-closing" id="card-closing"></p>
+      </div>
+    </section>
+
+    <!-- Location -->
+<!-- Location -->
+    <section id="location" class="section location">
+
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" id="loc-eyebrow"></p>
+        <div class="divider">❀</div>
+      </div>
+
+      <div class="loc-grid">
+
+        <!-- ================= NHÀ TRAI ================= -->
+        <div class="location-card" data-reveal>
+
+          <h3 class="location-title" id="groom-loc-heading"></h3>
+
+          <div class="loc-map">
+            <iframe
+              id="groom-map-frame"
+              title="Google Map - Nhà trai"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="loc-qr">
+            <div class="qr-frame">
+              <img
+                id="groom-qr-img"
+                alt="QR Google Maps - Nhà trai"
+                loading="lazy" />
+            </div>
+
+            <p class="qr-cap" id="groom-qr-cap"></p>
+
+            <a
+              class="btn-gold"
+              id="groom-map-link"
+              target="_blank"
+              rel="noopener">
+              <span data-vi>Mở bản đồ nhà trai</span>
+              <span data-en hidden>Open groom's map</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ================= NHÀ GÁI ================= -->
+        <div class="location-card" data-reveal>
+
+          <h3 class="location-title" id="bride-loc-heading"></h3>
+
+          <div class="loc-map">
+            <iframe
+              id="bride-map-frame"
+              title="Google Map - Nhà gái"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="loc-qr">
+            <div class="qr-frame">
+              <img
+                id="bride-qr-img"
+                alt="QR Google Maps - Nhà gái"
+                loading="lazy" />
+            </div>
+
+            <p class="qr-cap" id="bride-qr-cap"></p>
+
+            <a
+              class="btn-gold"
+              id="bride-map-link"
+              target="_blank"
+              rel="noopener">
+              <span data-vi>Mở bản đồ nhà gái</span>
+              <span data-en hidden>Open bride's map</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Gift -->
+    <section id="gift" class="section gift">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" id="gift-eyebrow"></p>
+        <div class="divider">❀</div>
+      </div>
+      <p class="gift-note" id="gift-note" data-reveal></p>
+      <div class="gift-cards" id="gift-cards" data-reveal></div>
+    </section>
+
+    <!-- Footer / thank you -->
+    <footer class="site-footer">
+      <div class="footer-dh">囍</div>
+      <p class="footer-thanks"><span data-vi>Thân mời &amp; Cảm ơn</span><span data-en hidden>With love &amp; thanks</span></p>
+      <p class="footer-names" id="footer-names">
+        <span id="footer-groom">Ngọc Đức</span>
+        <span class="amp">&amp;</span>
+        <span id="footer-bride">Mỹ Hạnh</span>
+      </p>
+      <p class="footer-date">25 . 10 . 2026</p>
+    </footer>
+
+  </main>
+
+  <!-- ===== Invite-link generator (host tool) ===== -->
+  <div id="link-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="lm-title">
+      <button class="modal-x" data-close aria-label="Đóng">&times;</button>
+      <div class="modal-dh">囍</div>
+      <h3 id="lm-title" class="modal-title">
+        <span data-vi>Tạo thiệp mời</span><span data-en hidden>Create invitation link</span>
+      </h3>
+      <form id="link-form" class="modal-form" autocomplete="off">
+        <label class="fld">
+          <span class="fld-lbl"><span data-vi>Kính mời</span><span data-en hidden>Invite</span> <span class="req">*</span></span>
+          <input id="in-title" type="text" placeholder="Bạn/ Anh / Chị / Cô Chú / Bạn / Gđ Bác" required />
+        </label>
+        <label class="fld">
+          <span class="fld-lbl"><span data-vi>Tên khách mời</span><span data-en hidden>Guest name</span> <span class="req">*</span></span>
+          <input id="in-name" type="text" placeholder="Nguyễn Văn A" required />
+        </label>
+        <label class="fld">
+          <span class="fld-lbl"><span data-vi>Tới dự hôn lễ của</span><span data-en hidden>To the wedding of</span></span>
+          <select id="in-self">
+            <option value="Chúng mình">Chúng mình</option>
+            <option value="Chúng em">Chúng em</option>
+            <option value="Chúng cháu">Chúng cháu</option>
+            <option value="Chúng con">Chúng con</option>
+            <option value="Các cháu">Các cháu</option>
+            <option value="Hai cháu">Hai cháu</option>
+            <option value="Anh Chị">Anh Chị</option>
+          </select>
+        </label>
+        <div class="fld">
+          <span class="fld-lbl"><span data-vi>Bên mời</span><span data-en hidden>Inviting side</span></span>
+          <div class="seg">
+            <label><input type="radio" name="ltype" value="groom" /><span data-vi>Nhà trai</span><span data-en hidden>Groom</span></label>
+            <label><input type="radio" name="ltype" value="bride" checked /><span data-vi>Nhà gái</span><span data-en hidden>Bride</span></label>
+          </div>
+        </div>
+        <div class="fld fld-row">
+          <span class="fld-lbl"><span data-vi>Hiển thị rút gọn</span><span data-en hidden>Compact view</span></span>
+          <label class="switch" title="Ẩn phần Chuyện tình yêu & Thơ tặng em">
+            <input type="checkbox" id="in-compact" />
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+          </label>
+        </div>
+        <div class="link-out" id="link-out" hidden>
+          <input id="link-field" type="text" readonly aria-label="Invite link" />
+          <button type="button" id="copy-link" class="btn-ghost"><span data-vi>Sao chép</span><span data-en hidden>Copy</span></button>
+        </div>
+        <button type="submit" class="btn-gold modal-submit">
+          <span data-vi>Tạo thiệp mời &amp; mở</span><span data-en hidden>Create link &amp; open</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Falling petals -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <script src="assets/js/images.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

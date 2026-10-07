@@ -1,0 +1,12 @@
+{
+  "name": "duc-hanh-wedding",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "images": "node tools/optimize-images.js"
+  },
+  "devDependencies": {
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.34.5"
+  }
+}
