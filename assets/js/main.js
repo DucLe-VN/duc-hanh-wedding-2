@@ -102,7 +102,6 @@
   function renderText() {
     renderNames();
     renderHeroInvite();
-    //renderTimeline();
     renderInviteCard();
     renderLocationText();
     renderGift();

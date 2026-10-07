@@ -42,14 +42,6 @@ const CONFIG = {
     "assets/images/prewedding/pre-02.jpg",
     "assets/images/prewedding/pre-03.jpg",
   ],
-
-  /* ---- Câu chuyện tình yêu (dòng thời gian) / Love story timeline ---
-     👉 Sửa 'date', 'title', 'text' cho đúng câu chuyện của bạn.
-        Ảnh nằm trong assets/images/love/ và prewedding/            */
-  story: [
-    
-  ],
-
   
   /* ---- Album ảnh cưới / Pre-wedding gallery ------------------------- */
   gallery: {
