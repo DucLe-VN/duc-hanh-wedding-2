@@ -553,7 +553,7 @@
       const url = buildInviteLink();
       $("#link-field").value = url;
       $("#link-out").hidden = false;
-      window.open(url, "_blank", "noopener");
+      //window.open(url, "_blank", "noopener");
     });
 
     // Copy to clipboard
