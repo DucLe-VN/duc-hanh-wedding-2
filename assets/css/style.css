@@ -311,17 +311,17 @@ img{ max-width:100%; display:block; }
 
 /* Ảnh thứ hai: vị trí ngang giữ ở giữa, dọc 30% */
 .hero-slides .slide:nth-child(2) {
-  background-position: 90% 40%;
+  background-position: 50% 40%;
 }
 
-/* Ảnh thứ ba: ngang 50%, dọc 40% */
+/* Ảnh thứ ba: ngang 30%, dọc 40% */
 .hero-slides .slide:nth-child(3) {
-  background-position: 100% 35%;
+  background-position: 30% 40%;
 }
 
-/* Ảnh thứ tư: ngang 70%, dọc 50% */
+/* Ảnh thứ tư: ngang 30%, dọc 50% */
 .hero-slides .slide:nth-child(4) {
-  background-position: 1000% 50%;
+  background-position: 30% 50%;
 }
 
 .hero-slides .slide.active{
