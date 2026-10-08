@@ -38,7 +38,7 @@ const CONFIG = {
   /* ---- Ảnh nền trang bìa (chạy slideshow) / Hero background slides -- */
   heroImages: [
     "assets/images/prewedding/pre-16.jpg",
-    "assets/images/prewedding/pre-13.jpg",
+    "assets/images/prewedding/pre-15.jpg",
     "assets/images/prewedding/pre-02.jpg",
     "assets/images/prewedding/pre-03.jpg",
   ],
