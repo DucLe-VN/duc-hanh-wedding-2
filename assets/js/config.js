@@ -52,7 +52,6 @@ const CONFIG = {
       "assets/images/moments/moment-03.jpg",
       "assets/images/moments/moment-04.jpg",
       "assets/images/moments/moment-05.jpg", 
-      "assets/images/propose/propose-01.jpg", 
       "assets/images/propose/propose-02.jpg", 
       "assets/images/propose/propose-03.jpg", 
       "assets/images/propose/propose-04.jpg",
